@@ -1,0 +1,602 @@
+/* Universal Styles */
+
+html {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.p-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.container-image {
+  width: 60%;
+  padding: 0 1.5rem;
+}
+
+.info-image {
+  width: 35%;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+#jumbotron,
+#learning {
+  background-color: gainsboro;
+}
+
+#practicing,
+#thesis {
+  background-color: whitesmoke;
+}
+
+/* Universal Font Styles */
+
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 35%);
+}
+
+nav a {
+  color: black;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: hsl(0, 0%, 28%);
+  margin: 1rem 0;
+  line-height: 1.4;
+  transition: color 400ms ease-in 100ms;
+}
+
+h1:hover {
+  color: midnightblue;
+}
+
+h2 {
+  font-size: 2rem;
+  color: hsl(0, 0%, 28%);
+  padding-top: 2rem;
+  text-align: center;
+  transition: color 1s ease-in 200ms;
+}
+
+h3 {
+  font-size: 2rem;
+  color: hsl(0, 0%, 28%);
+  margin: 2rem 0 1.5rem 0;
+}
+
+h4 {
+  color: hsl(0, 0%, 28%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color 400ms linear 200ms;
+}
+
+h2:hover {
+  color: firebrick;
+}
+
+p, blockquote {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 35%);
+  line-height: 1.5;
+  transition: color 400ms linear 200ms;
+}
+
+cite {
+  font-size: 0.7rem;
+  color: hsl(0, 0%, 28%);
+}
+
+p:hover,
+blockquote:hover,
+cite:hover {
+  color: black;
+}
+
+/* Header */
+
+header {
+  height: 4rem;
+  padding: 0 1.5rem;
+}
+
+header .desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+
+.logo img {
+  flex-grow: 1;
+  height: 2.5rem;
+}
+
+header .title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.title .colmar {
+  color: hsl(0, 0%, 25%);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.title .academy {
+  color: hsl(46, 11%, 55%);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+nav li:hover {
+  color: midnightblue;
+  text-decoration: underline;
+}
+
+.border {
+  background-color: skyblue;
+  width: 1rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header .desktop {
+    display: none;
+  }
+  header .mobile {
+    display: flex;
+  }
+  header .mobile ul {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* First Section */
+
+#jumbotron .p-container {
+  margin: auto 0;
+  margin-left: 1rem;
+}
+
+.heading {
+  margin-right: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: hsl(0, 0%, 28%);
+  padding: 0.5rem 0;
+  text-align: center;
+  margin: 1.5rem 0;
+  transition: all 400ms ease-in 100ms;
+}
+
+.btn:hover {
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+}
+
+.btn:active {
+  background-color: rgb(26,22,71);
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1400px) {
+  .heading {
+    margin-right: 6rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .heading {
+    margin-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .heading {
+    margin-right: 2rem;
+  }
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: block;
+    padding: 0;
+  }
+  .container-image {
+    width: 100%;
+    padding: 0;
+  }
+  .mobile {
+    display: flex;
+  }
+  .p-container {
+    width: 100%;
+  }
+  #jumbotron .p-container {
+    margin-left: 0;
+  }
+  .heading {
+    margin: 0;
+  }
+  .heading h1 {
+    font-size: 1.75rem;
+    margin: 2rem 1rem;
+    text-align: center;
+  }
+  .heading h4 {
+    margin: 0 1rem;
+    text-align: center;
+  }
+  .btn {
+    margin: 1.5rem 8rem 2rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #jumbotron .p-container {
+    margin: 0;
+  }
+  .heading {
+    margin: 0 1rem;
+  }
+  .heading h1,
+  .heading h4 {
+    text-align: left;
+    margin: 0;
+  }
+  .heading h1 {
+    padding: 2rem 0;
+  }
+  .btn {
+    margin: 1.5rem 0 2rem 0;
+    background-color: hsl(0,0%,60%);
+  }
+}
+
+/* Second Section - Fourth Section */
+
+.caption {
+  padding-right: 14rem;
+}
+
+.caption h4 {
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+blockquote {
+  letter-spacing: 0.03rem;
+  word-spacing: 0.02rem;
+  margin-bottom: 2rem;
+}
+
+.info {
+  display: flex;
+  min-width: 40%;
+  padding: 1rem;
+}
+
+.info .mobile {
+  display: none;
+}
+
+.explanation {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10rem 0 1.5rem;
+}
+
+.explanation h4:hover {
+  color: midnightblue;
+}
+
+.explanation a {
+  font-size: 0.8rem;
+  color: hsl(210, 100%, 50%);
+}
+
+.explanation a:visited {
+  color: midnightblue;
+}
+
+.explanation p {
+  padding: 0.5rem 0;
+}
+
+#practicing .info:first-child {
+  border-bottom: 4px solid hsl(0, 0%, 92%);
+}
+
+#practicing .info:last-child,
+#thesis .info:first-child {
+  background-color: gainsboro;
+}
+
+@media only screen and (max-width: 1400px) {
+  .caption {
+    padding-right: 6rem;
+  }
+  .explanation {
+    padding: 0 2rem 0 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .caption {
+    padding-right: 4rem;
+  }
+  .explanation {
+    padding: 0 1rem 0 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .caption {
+    padding-right: 2rem;
+  }
+  .explanation {
+    padding: 0 0 0 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .caption {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+  .caption h3 {
+    font-size: 1.9rem;
+  }
+  .caption h5 {
+    margin: 0 0 1.5rem 0;
+  }
+  .info {
+    padding: 1rem 1.5rem;
+  }
+  #thesis video {
+    padding: 2rem 0;
+  }
+  .caption h4 {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #practicing .container-image {
+    display: none;
+  }
+  .info .desktop {
+    display: none;
+  }
+  .info {
+    display: block;
+    padding: 1rem;
+  }
+  .info .mobile {
+    display: block;
+    width: 100%;
+  }
+  #practicing .info:first-child {
+    border: none;
+  }
+  .explanation {
+    width: 100%;
+    padding: 0;
+  }
+  .explanation h4,
+  .explanation p,
+  .explanation a {
+    padding-left: 1rem;
+  }
+  .explanation h4 {
+    padding-top: 1rem;
+  }
+  #practicing .info:last-child {
+    background-color: whitesmoke;
+  }
+  #thesis video {
+    padding: 1rem 0 1.5rem 0;
+  }
+  #thesis .caption {
+    display: none;
+  }
+  #thesis .p-container {
+    display: none;
+  }
+}
+
+/*Third Section */
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4.5rem;
+}
+
+.first-row, .second-row {
+  display: flex;
+  justify-content: center;
+}
+
+.first-row {
+  margin-bottom: 2rem;
+}
+
+.course-image {
+  background-color: white;
+}
+
+.margin {
+  margin-right: 2rem;
+}
+
+.course {
+  padding: 1rem 3rem 1.5rem 1rem;
+}
+
+.course p {
+  padding-top: 0.5rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .courses {
+    padding: 2rem 2.5rem;
+  }
+  .course {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .courses {
+    padding: 2rem;
+  }
+  .course {
+    padding: 1rem 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #learning {
+    background-color: whitesmoke;
+    border-top: 0.5px solid gainsboro;
+    border-bottom: 0.5px solid gainsboro;
+  }
+  .courses {
+    padding: 2rem 1rem;
+  }
+  .first-row, .second-row {
+    display: block;
+  }
+  .first-row {
+    margin: 0;
+  }
+  .course-image {
+    margin-bottom: 0.5rem;
+    margin-right: 0rem;
+    display: flex;
+  }
+  .image {
+    width: 60%;
+    display: flex;
+    align-items: center;
+  }
+  .course {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gainsboro;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .course p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #learning .course p, #learning .image {
+    display: none;
+  }
+  .courses {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  .course-image {
+    background-color: gainsboro;
+  }
+  .course {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: gainsboro;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.5px solid gainsboro;
+  padding: 1rem 1.5rem 4rem 1.5rem;
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 35%);
+}
+
+footer li {
+  display: inline-block;
+}
+
+footer:hover, a:hover {
+  color: black;
+}
+
+small {
+  transition: font-weight 500ms ease-out 200ms;
+}
+
+small:hover{
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 450px) {
+  footer {
+    color: black;
+    background-color: whitesmoke;
+    padding: 1rem;
+  }
+  footer ul {
+    display: none;
+  }
+}
